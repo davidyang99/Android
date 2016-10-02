@@ -14,15 +14,41 @@
     android:background="@color/bg_gradient_end"
     tools:showIn="@layout/activity_main">
 
-    <TextView android:layout_width="wrap_content"
-        android:id="@+id/txtSpeechInput"
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:textColor="@color/white"
-        android:textSize="26dp"
-        android:textStyle="normal" />
+        android:id="@+id/languageTextView"
+        android:textColor="@color/primary_material_light"
+        android:hint="Building"
+        android:textColorHint="@color/primary_material_light"
+        android:layout_marginLeft="100dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_below="@+id/yourRadioGroup"
+        android:layout_marginBottom="100dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView android:layout_width="match_parent"
+                android:id="@+id/txtSpeechInput"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:textColor="@color/white"
+                android:layout_marginBottom="100dp"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,7 +57,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <ImageButton
             android:id="@+id/btnSpeak"
@@ -47,6 +74,40 @@
         android:text="@string/tap_on_mic"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:textStyle="normal" />
-</LinearLayout>
+        android:textStyle="normal"
+        android:layout_weight="40.50" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rbEnglish"
+        android:id="@+id/yourRadioGroup">
+
+        <RadioButton
+            android:text="English"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/rbEnglish"
+            android:checked="true"
+            android:layout_weight="1"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:text="中文"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/rbEnglish"
+            android:layout_toEndOf="@+id/rbEnglish"
+            android:id="@+id/rbChinese"
+            android:layout_weight="1"
+            android:textColor="@color/white" />
+
+    </RadioGroup>
+
 </RelativeLayout>

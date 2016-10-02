@@ -3,8 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.maxmind.speechtotext.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:title="@string/Action_Save"
         android:orderInCategory="100"
+        android:id="@+id/action_Save"
+        android:enabled="true"
+        android:visible="true"
+        android:checkable="false" />
+    <item
+        android:id="@+id/action_Exit"
+        android:orderInCategory="101"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:visible="true"
+        android:enabled="true"
+        android:checkable="false" />
 </menu>
