@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         AutoCompleteTextView languageTextView;
         languageTextView=(AutoCompleteTextView)findViewById(R.id.languageTextView);
-        String[] buildings = new String[] {"TDA001",  "TDA002",  "TDA003",  "TDA004",  "TDA005"};
+        String[] buildings = new String[] {"TDA001",  "TDA002",  "TDA003",  "TDA004"};
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,buildings);
 
         languageTextView.setAdapter(adapter);
