@@ -20,7 +20,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-
+		//maybe I should try to put my python learning into github
         assertEquals("com.maxmind.speechtotext", appContext.getPackageName());
     }
 }
